@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
   init()
 })
 
+<<<<<<< HEAD
 function handlebarsSetup() {
   //put any handlebars registrations here.
   Handlebars.registerHelper('displayIngredient', function(ingredient) {
@@ -65,3 +66,17 @@ function getRecipeVals() {
   const recipe = {name, ingredients, description}
   return(recipe)
 }
+=======
+function createRecipe() {
+  // const recipe = Handlebars.compile(document.getElementById('recipe-form').innerHTML);
+  const name = document.getElementById("name").value;
+  const ingredients = [];
+  const ingredientsHTML = document.getElementsByName("ingredients");
+
+  for (i = 0; i < ingredientsHTML.length; i++) {
+    ingredients.push(ingredientsHTML(i).value);
+  };
+};
+
+// Handlebars.registerPartial('recipe-details-partial', document.getElementbyId("recipe"))
+>>>>>>> c8d05080b2b56ab6d1476aaf580339420932116a
